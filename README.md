@@ -48,4 +48,4 @@ $\text{Years} = 581,497,370,030,355,018,409/31,536,000 \approx 18,435,299,434,00
 
 With these calculations, it would take an attacker approximately 18.4 trillion years to brute-force such a password with current technology, assuming 100 billion guesses per second. This time is vastly longer than the age of the universe, making the password effectively uncrackable by brute force with today's technology.
 
-So, even though the password doesn't include special characters, its length and randomness make it extremely secure. Adding special characters could make it even stronger, but for most practical purposes, Apple's generated passwords are more than sufficient in terms of security.
+So, even though the password doesn't include special characters, its length and randomness make it extremely secure. Adding special characters could make it even stronger, but for most practical purposes, these generated passwords are more than sufficient in terms of security.
