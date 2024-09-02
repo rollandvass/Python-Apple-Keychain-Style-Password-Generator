@@ -1,6 +1,6 @@
 # Secure Password Generator
 
-This small application will generate you a secure 20 character password in the format of `XXXXXX-XXXXXX-XXXXXX`
+This small application will generate you a secure 18 character password in the format of `XXXXXX-XXXXXX-XXXXXX`
 Sound familiar? Yes, this is similar to how Apple generates passwords with their iCloud Keychain.
 
 # Security of the Passwords
@@ -30,10 +30,10 @@ This is approximately 58.15 quattuordecillion possible combinations.
 
 The time it would take to brute-force such a password depends on several factors:
 
-1. Attacker's Computational Power:
+1. Attacker's Computational Power: <br>
    Let's assume a very powerful attacker with a setup capable of trying 100 billion guesses per second (which is a high-end estimate but feasible with state-of-the-art hardware and techniques).
 
-2. Time to Crack:
+2. Time to Crack: <br>
    The time to crack can be calculated by dividing the total number of combinations by the number of guesses per second. <br>
    $\text{Time to Crack} = \frac{58,149,737,003,035,501,840,943,585,361,003,600}{100,000,000,000\ \text{guesses/second}}$
 
