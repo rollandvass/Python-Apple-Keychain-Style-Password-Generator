@@ -1,9 +1,10 @@
 # Secure Password Generator
 
 This small application will generate you a secure 20 character password in the format of `XXXXXX-XXXXXX-XXXXXX`
-Seems similar? Yes, this is how Apple does it with their iCloud Keychain.
+Sound familiar? Yes, this is similar to how Apple generates passwords with their iCloud Keychain.
 
-Security of the Passwords
+# Security of the Passwords
+
 These passwords are quite secure due to their length and randomness. The security of a password is determined by the total number of possible combinations an attacker would need to try (brute force) in order to guess the password. This is often referred to as the "entropy" of the password.
 
 # Calculation of Entropy
