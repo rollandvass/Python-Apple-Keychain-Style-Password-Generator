@@ -17,10 +17,10 @@ These passwords are quite secure due to their length and randomness. The securit
 2. Password Length:
    18 characters (excluding the dashes, which are not part of the entropy calculation).
 
-3. Total Combinations: The total number of combinations is $`62^18$
+3. Total Combinations: The total number of combinations is $62^18$
 
 Let's calculate that:
-$`62^18 = 58,149,737,003,035,501,840,943,585,361,003,600$
+$62^18 = 58,149,737,003,035,501,840,943,585,361,003,600$
 This is approximately 58.15 quattuordecillion possible combinations.
 
 # Time to Brute Force in 2024
