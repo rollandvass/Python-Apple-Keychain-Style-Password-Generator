@@ -34,13 +34,13 @@ The time it would take to brute-force such a password depends on several factors
 
 2. Time to Crack:
    The time to crack can be calculated by dividing the total number of combinations by the number of guesses per second. <br>
-   $\text{Time to Crack} = \frac{58,149,737,003,035,501,840,943,585,361,003,600}{100,000,000,000 \text{guesses/second}}$
+   $\text{Time to Crack} = \frac{58,149,737,003,035,501,840,943,585,361,003,600}{100,000,000,000\ \text{guesses/second}}$
 
 This equals approximately: <br>
-$\text{Time to Crack} = 581,497,370,030,355,018,409 \text{seconds}$
+$\text{Time to Crack} = 581,497,370,030,355,018,409\ \text{seconds}$
 
 Converting this into years: <br>
-$\text{Years} = 581,497,370,030,355,018,409/31,536,000 \approx 18,435,299,434,000 \text{years}$
+$\text{Years} = 581,497,370,030,355,018,409/31,536,000 \approx 18,435,299,434,000\ \text{years}$
 ​
 
 # Conclusion
