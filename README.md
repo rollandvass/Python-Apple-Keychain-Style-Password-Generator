@@ -8,19 +8,21 @@ These passwords are quite secure due to their length and randomness. The securit
 
 # Calculation of Entropy
 
-1. Character Set Size:
-   Uppercase letters: 26
-   Lowercase letters: 26
-   Digits: 10
+1. Character Set Size: <br>
+   Uppercase letters: 26 <br>
+   Lowercase letters: 26 <br>
+   Digits: 10 <br>
    Total: 62 possible characters
 
-2. Password Length:
+2. Password Length: <br>
    18 characters (excluding the dashes, which are not part of the entropy calculation).
 
-3. Total Combinations: The total number of combinations is $62^18$
+3. Total Combinations: <br>
+   The total number of combinations is $62^(18)$
 
 Let's calculate that:
-$62^18 = 58,149,737,003,035,501,840,943,585,361,003,600$
+<br>
+$62^(18) = 58,149,737,003,035,501,840,943,585,361,003,600$
 This is approximately 58.15 quattuordecillion possible combinations.
 
 # Time to Brute Force in 2024
