@@ -3,6 +3,23 @@
 This small application will generate you a secure 18 character password in the format of `XXXXXX-XXXXXX-XXXXXX`
 Sound familiar? Yes, this is similar to how Apple generates passwords with their iCloud Keychain.
 
+# How to use:
+
+1. Download and extract: <br>
+
+   - Click the green "Code" button to download the project as a ZIP file. <br>
+   - After downloading, extract the ZIP file to your desired location.
+
+2. Run the application: <br>
+   - Navigate to the `dist` directory within the extracted files. <br>
+   - Double-click `main.exe` to run the application. <br>
+   - After generation, you can click the "Copy" button to copy your new password to the clipboard.
+
+# CSV File Usage:
+
+- If you use this app to generate your own passwords, the generated passwords will be saved in the `Python Passwords.csv` file. <br>
+- You can easily import this CSV file into most browsers to manage your passwords.
+
 # Security of the Passwords
 
 These passwords are quite secure due to their length and randomness. The security of a password is determined by the total number of possible combinations an attacker would need to try (brute force) in order to guess the password. This is often referred to as the "entropy" of the password.
