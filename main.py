@@ -1,5 +1,8 @@
 import random
 import string
+import csv
+
+filename = "Python Passwords.csv"
 
 def generate_password():
     lowercase = string.ascii_lowercase
@@ -26,4 +29,23 @@ def generate_password():
 
     return formatted_password
 
-print(generate_password())
+def get_user_input():
+    name = input("Enter the website name: ")
+    url = input("Enter the website URL: ")
+    username = input("Enter your email/username: ")
+    note = input("Enter any additional note (optional): ")
+    return {"name": name, "url": url, "username": username, "note": note}
+
+with open(filename, 'a', newline='') as file:
+    writer = csv.writer(file)
+
+    file.seek(0, 2)
+    if file.tell() == 0:
+        writer.writerow(["name", "url", "username", "password", "note"])
+
+    entry = get_user_input()
+
+    password = generate_password()
+    writer.writerow([entry["name"], entry["url"], entry["username"], password, entry["note"]])
+
+print(f"\nPassword for {entry['name']} saved successfully.\nYou can copy it below:\n\n{password}\n")
