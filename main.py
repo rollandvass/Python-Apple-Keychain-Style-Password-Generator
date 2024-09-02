@@ -1,6 +1,11 @@
 import random
 import string
 import csv
+from colorama import init, Fore, Style
+
+init()
+FORES = [ Fore.GREEN ]
+BRIGHTNESS = [ Style.BRIGHT ]
 
 filename = "Python Passwords.csv"
 
@@ -36,6 +41,9 @@ def get_user_input():
     note = input("Enter any additional note (optional): ")
     return {"name": name, "url": url, "username": username, "note": note}
 
+def color_print(text, color=Fore.GREEN, brightness=Style.BRIGHT, **kwargs):
+    print(f"{brightness}{color}{text}{Style.RESET_ALL}", **kwargs)
+
 with open(filename, 'a', newline='') as file:
     writer = csv.writer(file)
 
@@ -48,4 +56,5 @@ with open(filename, 'a', newline='') as file:
     password = generate_password()
     writer.writerow([entry["name"], entry["url"], entry["username"], password, entry["note"]])
 
-print(f"\nPassword for {entry['name']} saved successfully.\nYou can copy it below:\n\n{password}\n")
+print(f"\nPassword for {entry['name']} saved successfully.\nYou can copy it below:\n")
+color_print(password + "\n")
