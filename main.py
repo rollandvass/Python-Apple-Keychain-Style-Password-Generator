@@ -2,6 +2,7 @@ import random
 import string
 import csv
 import tkinter as tk
+from tkinter import PhotoImage
 from tkinter import messagebox
 
 filename = "Python Passwords.csv"
@@ -44,10 +45,10 @@ def copy_to_clipboard(password):
     root.update()
     root.clipboard_append(password)
 
-def on_copy():
+def handle_on_copy():
     copy_to_clipboard(password_label.cget("text"))
 
-def handle_on_submit():
+def handle_on_generate():
     name = name_entry.get()
     url = url_entry.get()
     email = email_entry.get()
@@ -73,13 +74,19 @@ def handle_on_submit():
     copy_button.config(state=tk.NORMAL)
     copy_button.pack(pady=10)
 
+def clear_fields():
     name_entry.delete(0, tk.END)
     url_entry.delete(0, tk.END)
     email_entry.delete(0, tk.END)
     note_entry.delete(0, tk.END)
+    password_label.config(text="")
+    copy_button.pack_forget()
 
 root = tk.Tk()
+root.configure(bg="#161616")
 root.title("Password Generator")
+icon = PhotoImage(file="assets/password.png")
+root.iconphoto(False, icon)
 
 window_width = 450
 window_height = 500
@@ -91,28 +98,31 @@ y_position = int((screen_height / 2) - (window_height / 2))
 
 root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 
-tk.Label(root, text="Website Name:", font=("Arial", 12)).pack(pady=5)
-name_entry = tk.Entry(root, width=50)
+tk.Label(root, text="Website Name:", font=("Arial", 13), fg="white", bg="#161616").pack(pady=5)
+name_entry = tk.Entry(root, width=50, bg="#505050", fg="white", insertbackground="white")
 name_entry.pack(pady=5)
 
-tk.Label(root, text="Website URL:", font=("Arial", 12)).pack(pady=5)
-url_entry = tk.Entry(root, width=50)
+tk.Label(root, text="Website URL:", font=("Arial", 13), fg="white", bg="#161616").pack(pady=5)
+url_entry = tk.Entry(root, width=50, bg="#505050", fg="white", insertbackground="white")
 url_entry.pack(pady=5)
 
-tk.Label(root, text="Email/Username:", font=("Arial", 12)).pack(pady=5)
-email_entry = tk.Entry(root, width=50)
+tk.Label(root, text="Email/Username:", font=("Arial", 13), fg="white", bg="#161616").pack(pady=5)
+email_entry = tk.Entry(root, width=50, bg="#505050", fg="white", insertbackground="white")
 email_entry.pack(pady=5)
 
-tk.Label(root, text="Note (optional):", font=("Arial", 12)).pack(pady=5)
-note_entry = tk.Entry(root, width=50)
+tk.Label(root, text="Note (optional):", font=("Arial", 13), fg="white", bg="#161616").pack(pady=5)
+note_entry = tk.Entry(root, width=50, bg="#505050", fg="white", insertbackground="white")
 note_entry.pack(pady=5)
 
-tk.Button(root, text="Generate Password", command=handle_on_submit, font=("Arial", 12)).pack(pady=20)
+buttons_frame = tk.Frame(root, bg="#161616")
+buttons_frame.pack(pady=20)
+tk.Button(buttons_frame, text="Generate Password", command=handle_on_generate, font=("Arial", 13), fg="white", bg="#003300").pack(side="left", padx=10)
+tk.Button(buttons_frame, text="Clear", command=clear_fields, font=("Arial", 13), fg="white", bg="#800000").pack(side="left", padx=10)
 
-password_label = tk.Label(root, text="", font=("Arial", 16, "bold"), fg="green")
+password_label = tk.Label(root, text="", font=("Arial", 18, "bold"), bg="#161616", fg="green")
 password_label.pack(pady=20)
 
-copy_button = tk.Button(root, text="Copy", command=on_copy, font=("Arial", 12), state=tk.DISABLED)
+copy_button = tk.Button(root, text="Copy", command=handle_on_copy, font=("Arial", 13), state=tk.DISABLED, bg="#505050", fg="white")
 copy_button.pack_forget()
 
 root.mainloop()
