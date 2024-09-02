@@ -17,10 +17,10 @@ These passwords are quite secure due to their length and randomness. The securit
 2. Password Length:
    18 characters (excluding the dashes, which are not part of the entropy calculation).
 
-3. Total Combinations: The total number of combinations is $`\62^18`$
+3. Total Combinations: The total number of combinations is $`62^18$
 
 Let's calculate that:
-$`\62^18 = 58,149,737,003,035,501,840,943,585,361,003,600`$
+$`62^18 = 58,149,737,003,035,501,840,943,585,361,003,600$
 This is approximately 58.15 quattuordecillion possible combinations.
 
 # Time to Brute Force in 2024
@@ -32,13 +32,13 @@ The time it would take to brute-force such a password depends on several factors
 
 2. Time to Crack:
    The time to crack can be calculated by dividing the total number of combinations by the number of guesses per second.
-   $`\Time to Crack = 58,149,737,003,035,501,840,943,585,361,003,600/100,000,000,000 guesses/second`$
+   $`Time to Crack = 58,149,737,003,035,501,840,943,585,361,003,600/100,000,000,000 guesses/second$
 
 This equals approximately:
-$`\Time to Crack = 581,497,370,030,355,018,409 seconds`$
+$`Time to Crack = 581,497,370,030,355,018,409 seconds$
 
 Converting this into years:
-$`\Years = 581,497,370,030,355,018,409/31,536,000 ~~ 18,435,299,434,000 years`$
+$`Years = 581,497,370,030,355,018,409/31,536,000 ~~ 18,435,299,434,000 years$
 ​
 
 # Conclusion
